@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --radius: 20px;
+}
+
+html,body,#root{height:100%;}
+
+html { scroll-behavior: smooth; }
+html { scroll-padding-top: 96px; }
+
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+}
+
+.card-shadow{box-shadow: 0 8px 30px rgba(2,6,23,0.08);}
+
+.rounded-xxl{border-radius: var(--radius);} 
+
+.logo-item{transition:transform .22s, filter .22s, box-shadow .22s}
+.logo-item:hover{transform:translateY(-6px) scale(1.02); filter:drop-shadow(0 8px 24px rgba(58,111,248,0.18));}
+
+.metric-badge{background:linear-gradient(90deg,#ffffff 0%, rgba(255,255,255,0.92) 100%); padding:10px 14px; border-radius:14px}
+.rating-card{background:linear-gradient(180deg,rgba(255,255,255,0.98),#ffffff); border-radius:16px; padding:12px; box-shadow:0 12px 30px rgba(10,20,60,0.12)}
+
+.service-gradient{background: linear-gradient(135deg, rgba(58,111,248,0.12), rgba(74,66,255,0.06));}
+
+.testimonial-glass{background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.06); backdrop-filter: blur(8px)}
+
+.header-blur{background:rgba(255,255,255,0.8); backdrop-filter: blur(6px)}
+
+.metric-badge{background:#ffffff;padding:10px 14px;border-radius:14px;box-shadow:0 12px 30px rgba(10,20,60,0.06);display:flex;flex-direction:column;align-items:flex-start}
+
+.rating-vertical{width:104px;padding:14px;border-radius:14px;background:#ffffff;box-shadow:0 18px 40px rgba(10,20,60,0.12);text-align:center}
+
+.page-btn{padding:6px 10px;border-radius:8px;border:1px solid rgba(100,100,120,0.12)}
+.page-btn.active{background:var(--tw-color-primary, #3A6FF8);color:#fff}
+
+.testimonial-arrow{position:absolute;top:40%;transform:translateY(-50%);width:44px;height:44px;border-radius:999px;background:rgba(255,255,255,0.06);color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid rgba(255,255,255,0.06);backdrop-filter:blur(6px);cursor:pointer}
+.testimonial-arrow:hover{background:rgba(255,255,255,0.1)}
+.testimonial-arrow.left-2{left:8px}
+.testimonial-arrow.right-2{right:8px}
+.no-scrollbar::-webkit-scrollbar{display:none}
+.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+
+.snap-container{scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.snap-card{scroll-snap-align:center}
+
+
+.fade-up{transform: translateY(8px);opacity:0;animation:fadeUp .6s ease forwards}
+@keyframes fadeUp{to{transform:none;opacity:1}}
