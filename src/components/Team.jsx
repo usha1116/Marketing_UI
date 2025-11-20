@@ -8,15 +8,15 @@ const team = [
 
 export default function Team(){
   return (
-    <section id="team" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        <h3 className="text-2xl font-bold mb-8">The People Powering Us</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section id="team" className="py-12 sm:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+        <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">The People Powering Us</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {team.map((m)=> (
-            <div key={m.name} className="p-6 rounded-xxl bg-white card-shadow">
-              <img src={`https://i.pravatar.cc/120?u=${m.name}`} className="w-28 h-28 rounded-full mx-auto" alt={m.name} />
-              <div className="mt-4 text-lg font-semibold">{m.name}</div>
-              <div className="text-slate-500">{m.role}</div>
+            <div key={m.name} className="p-5 sm:p-6 rounded-xxl bg-white card-shadow">
+              <img src={`https://i.pravatar.cc/120?u=${m.name}`} className="w-24 h-24 sm:w-28 sm:h-28 rounded-full mx-auto" alt={m.name} />
+              <div className="mt-4 text-base sm:text-lg font-semibold">{m.name}</div>
+              <div className="text-sm sm:text-base text-slate-500">{m.role}</div>
             </div>
           ))}
         </div>

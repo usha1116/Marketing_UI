@@ -6,8 +6,11 @@
   --radius: 20px;
 }
 
-html,body,#root{height:100%;}
-
+/* html,body,#root{height:100%;} */
+html, body {
+    height: auto;
+  }
+  
 html { scroll-behavior: smooth; }
 html { scroll-padding-top: 96px; }
 

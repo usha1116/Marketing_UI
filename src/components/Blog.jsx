@@ -61,20 +61,20 @@ export default function Blog(){
   }
 
   return (
-    <section id="blog" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <h3 className="text-2xl font-bold mb-6">Fuel for Thought</h3>
+    <section id="blog" className="py-12 sm:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Fuel for Thought</h3>
         <div className="relative">
           <button aria-label="Previous" onClick={() => scrollBy('prev')} className="testimonial-arrow left-2 hidden md:flex">‹</button>
-          <div ref={containerRef} className={`flex gap-6 overflow-x-auto py-4 no-scrollbar snap-container ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}>
+          <div ref={containerRef} className={`flex gap-4 sm:gap-6 overflow-x-auto py-4 no-scrollbar snap-container ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}>
             {posts.map((p,i)=> (
-              <article key={i} className="min-w-[320px] rounded-xxl overflow-hidden card-shadow bg-white snap-card">
-                <img loading="lazy" src={p.img} className="w-full h-44 object-cover" alt={p.title} />
+              <article key={i} className="min-w-[280px] sm:min-w-[320px] rounded-xxl overflow-hidden card-shadow bg-white snap-card">
+                <img loading="lazy" src={p.img} className="w-full h-40 sm:h-44 object-cover" alt={p.title} />
                 <div className="p-4">
-                  <div className="font-semibold">{p.title}</div>
-                  <p className="text-sm text-slate-600 mt-2">Short snippet about the article to entice the reader.</p>
-                  <div className="mt-4">
-                    <button className="text-primary font-medium">Read More</button>
+                  <div className="font-semibold text-sm sm:text-base">{p.title}</div>
+                  <p className="text-xs sm:text-sm text-slate-600 mt-2">Short snippet about the article to entice the reader.</p>
+                  <div className="mt-3 sm:mt-4">
+                    <button className="text-primary font-medium text-sm sm:text-base">Read More</button>
                   </div>
                 </div>
               </article>
@@ -82,7 +82,6 @@ export default function Blog(){
           </div>
           <button aria-label="Next" onClick={() => scrollBy('next')} className="testimonial-arrow right-2 hidden md:flex">›</button>
         </div>
-        {/* pagination removed — carousel is swipeable across all posts */}
       </div>
     </section>
   )

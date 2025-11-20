@@ -14,13 +14,13 @@ const logos = [
 
 export default function Logos(){
   return (
-    <section id="trusted" className="py-12 bg-darkbg text-white">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h4 className="text-xl font-semibold mb-6">Backed by Industry Leaders</h4>
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center">
+    <section id="trusted" className="py-10 sm:py-12 bg-darkbg text-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h4 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Backed by Industry Leaders</h4>
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 sm:gap-6 items-center justify-center">
           {logos.map((l,i)=> (
             <div key={i} className="flex items-center justify-center opacity-90 transition logo-item">
-              <img src={l.src} alt={`${l.alt} logo`} className="max-h-10 filter brightness-90" />
+              <img src={l.src} alt={`${l.alt} logo`} className="max-h-8 sm:max-h-10 filter brightness-90" />
             </div>
           ))}
         </div>

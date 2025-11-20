@@ -14,7 +14,7 @@ export default function App(){
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="space-y-28">
+      <main className="space-y-16 sm:space-y-20 md:space-y-28">
         <Hero />
         <DataDriven />
         <ServicesDark />

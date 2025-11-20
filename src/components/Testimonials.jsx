@@ -63,24 +63,24 @@ export default function Testimonials(){
   }
 
   return (
-    <section id="testimonials" className="bg-black text-white py-16 relative">
-      <div className="max-w-6xl mx-auto px-6">
-        <h3 className="text-2xl font-bold text-center mb-8">Results Backed by Trust</h3>
+    <section id="testimonials" className="bg-black text-white py-12 sm:py-16 relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Results Backed by Trust</h3>
 
         <div className="relative">
           <button aria-label="Previous" onClick={() => scrollBy('prev')} className="testimonial-arrow left-2 hidden md:flex">‹</button>
-          <div ref={containerRef} className={`flex gap-6 overflow-x-auto py-4 no-scrollbar snap-container ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}>
+          <div ref={containerRef} className={`flex gap-4 sm:gap-6 overflow-x-auto py-4 no-scrollbar snap-container ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}>
             {items.map((t,i)=> (
-              <div key={i} className="min-w-[320px] p-6 rounded-xxl testimonial-glass card-shadow snap-card">
-                <div className="flex items-center gap-4">
-                  <img src={t.img} className="w-12 h-12 rounded-full border-2 border-white" alt={t.name} />
+              <div key={i} className="min-w-[280px] sm:min-w-[320px] p-5 sm:p-6 rounded-xxl testimonial-glass card-shadow snap-card">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <img src={t.img} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white" alt={t.name} />
                   <div>
-                    <div className="font-semibold text-white">{t.name}</div>
-                    <div className="text-sm text-slate-300">{t.role}</div>
+                    <div className="font-semibold text-white text-sm sm:text-base">{t.name}</div>
+                    <div className="text-xs sm:text-sm text-slate-300">{t.role}</div>
                   </div>
                 </div>
-                <p className="mt-4 text-slate-200">{t.text}</p>
-                <div className="mt-4 h-0.5 w-12 bg-primary rounded-full"></div>
+                <p className="mt-3 sm:mt-4 text-sm sm:text-base text-slate-200">{t.text}</p>
+                <div className="mt-3 sm:mt-4 h-0.5 w-12 bg-primary rounded-full"></div>
               </div>
             ))}
           </div>
